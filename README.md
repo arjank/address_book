@@ -18,9 +18,21 @@ because [first name and last name does not make sense](http://www.kalzumeus.com/
 
 ## Install
 
-This app has been tested with Node 5.9.1 and NPM 3.7.3. It also requires
-a recent version of browserify.
+This app has been tested with Node 5.10.0 and NPM 3.8.3. It also requires
+a recent version of browserify (13.0.0 was used).
+
+## Run
+
+To start the application, run `npm start` in a terminal window. This will start the server
+on localhost at port 8000.
+
+## Browsers
+
+This app has been tested with the latest versions of Chrome (49.0.2623.110) and Firefox (45.0.1).
 
 ## ECMAscript 2015
 
-This app uses ECMAscript 2015 but does not include a compiler. It has been tested in Chrome and Firefox only.
+This app uses ECMAscript 2015 but does not include a compiler. It has been tested
+with the latest versions of Chrome and Firefox only. These versions have better ECMAscript 2015
+support than compilers such as Babel. (See http://kangax.github.io/compat-table/es6/)
+for an overview.
