@@ -1,6 +1,6 @@
 /app/bower_components
 logs/*
-/app/generated
+/app/generated/*
 !.gitkeep
 node_modules/
 bower_components/
