@@ -1,0 +1,93 @@
+body {
+    padding: 5px 10px;
+    font-size: .9em;
+}
+
+h1 {
+    margin-top: 0;
+}
+
+.button, button {
+    padding: 0 3px;
+    border: 2px outset #888;
+    border-radius: 3px;
+    display: inline-block;
+    float: left;
+    background: #eee linear-gradient(to bottom right, #ddd, #eee 60%);
+    color: #333;
+}
+.button:hover, button:hover {
+    background: #ccc linear-gradient(to bottom right, #bbb, #ddd 60%);
+}
+.button:active, button:active {
+    border: 2px inset #888;
+}
+.button + .button, button + button {
+    margin-left: 10px;
+}
+
+.row {
+    float: left;
+    width: 100%;
+    clear: both;
+    padding-top: 5px;
+    border-top: 1px solid #888;
+    margin-top: 5px;
+}
+.row:first-child {
+    padding-top: 0;
+    border-top: 0;
+}
+.row label, .row input {
+    display: inline-block;
+}
+.row label {
+    width: 5em;
+}
+.row input {
+    width: 15em;
+}
+
+.row .error-message {
+    margin-left: 5em;
+    color: #c33;
+}
+
+form {
+    float: left;
+    clear: both;
+    width: auto;
+    margin-top: 10px;
+    background-color: #fff !important
+}
+
+table {
+    border: 2px solid #bbb;
+    margin: 0 0 10px 0;
+}
+
+thead {
+    font-weight: bold;
+    border-bottom: 2px solid #bbb;
+}
+tr {
+    background-color: #fff;
+}
+tr:nth-child(even) {
+    background-color: #eee;
+}
+td {
+    border-left: 1px solid #bbb;
+    padding: 1px 3px;
+}
+
+.ng-invalid.ng-touched {
+    border-color: #c33;
+}
+.fa {
+    visibility: hidden;
+}
+.ng-valid + .fa {
+    visibility: visible;
+    color: #5a5;
+}

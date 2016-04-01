@@ -1,0 +1,37 @@
+<div ng-controller="DetailCtrl">
+    <button type="button" data-ng-click="back()">&lt; Back to overview</button>
+    <form name="detailForm" novalidate data-ng-submit="detailForm.$valid && submit(card)">
+        <div class="row">
+            <label for="firstName">First name</label>
+            <input type="text" name="firstName" id="firstName" data-ng-model="card.firstName" required>
+            <span class="fa fa-check"></span>
+            <div class="error-message" data-ng-show="detailForm.firstName.$error.required && (detailForm.firstName.$touched || detailForm.$submitted)">First name is required</div>
+        </div>
+        <div class="row">
+            <label for="lastName">Last Name</label>
+            <input type="text" name="lastName" id="lastName" data-ng-model="card.lastName" required>
+            <span class="fa fa-check"></span>
+            <div class="error-message" data-ng-show="detailForm.lastName.$error.required && (detailForm.lastName.$touched || detailForm.$submitted)">Last name is required</div>
+        </div>
+        <div class="row">
+            <label for="email">Email</label>
+            <input type="text" name="email" id="email" data-ng-model="card.email" required data-is-email>
+            <span class="fa fa-check"></span>
+            <div class="error-message" data-ng-show="detailForm.email.$error.required && (detailForm.email.$touched || detailForm.$submitted)">Email is required</div>
+            <div class="error-message" data-ng-show="detailForm.email.$error.isEmail && (detailForm.email.$touched || detailForm.$submitted)">Email must be a valid email address</div>
+        </div>
+        <div class="row">
+            <label for="country">Country</label>
+            <select name="country" id="country" data-ng-model="card.country" required>
+                <option data-ng-repeat="country in countries">{{ country }}</option>
+            </select>
+            <span class="fa fa-check"></span>
+            <div class="error-message" data-ng-show="detailForm.country.$error.required && (detailForm.country.$touched || detailForm.$submitted)">Country is required</div>
+        </div>
+        <div class="row">
+            <button type="button" data-ng-click="reset(detailForm)">Reset</button>
+            <button type="submit">Submit</button>
+            <button type="button" data-ng-show="card.id" data-ng-click="removeCard(card)">Delete</button>
+        </div>
+    </form>
+</div>

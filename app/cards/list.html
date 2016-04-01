@@ -1,0 +1,23 @@
+<div ng-controller="ListCtrl">
+    <table>
+        <thead>
+        <tr>
+            <td>First name</td>
+            <td>Last name</td>
+            <td>Email</td>
+            <td>Country</td>
+            <td>Edit</td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr data-ng-repeat="card in allCards">
+            <td>{{ card.firstName }}</td>
+            <td>{{ card.lastName }}</td>
+            <td><a data-ng-href="mailto:{{card.email}}">{{ card.email }}</a></td>
+            <td>{{ card.country }}</td>
+            <td><button class="button" data-ng-click="editCard(card)">Edit</button></td>
+        </tr>
+        </tbody>
+    </table>
+    <button type="button" data-ng-click="addCard()">Add new item</button>
+</div>
