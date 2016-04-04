@@ -36,3 +36,17 @@ This app uses ECMAscript 2015 but does not include a compiler. It has been teste
 with the latest versions of Chrome and Firefox only. These versions have better ECMAscript 2015
 support than compilers such as Babel. (See http://kangax.github.io/compat-table/es6/)
 for an overview.
+
+## Testing
+
+This app comes with some [Protractor](http://angular.github.io/protractor/#/) tests. These tests
+are integration tests and test the whole application.
+
+To run these tests, you first need to install protractor: `npm install -g protractor`
+
+Then use the commands:
+
+    cd protractor-tests
+    protractor protractor.conf.js
+    
+These tests should not be considered a replacement for (the missing) unit tests.
