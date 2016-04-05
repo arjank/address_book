@@ -43,6 +43,7 @@ This app comes with some [Protractor](http://angular.github.io/protractor/#/) te
 are integration tests and test the whole application.
 
 To run these tests, you first need to install protractor: `npm install -g protractor`
+and start the webdriver manager: `webdriver-manager start`.
 
 Then use the commands:
 
